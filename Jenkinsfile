@@ -4,14 +4,14 @@ pipeline {
         maven 'M2_HOME'
     }
     environment {
-    registry = '970993390475.dkr.ecr.us-east-1.amazonaws.com/devop_repository'
-    registryCredential = 'jenkins-ecr'
+    registry = '894238830869.dkr.ecr.us-east-1.amazonaws.com/devops_repository'
+    registryCredential = 'Jenkins'
     dockerimage = ''
   }
     stages {
         stage('Checkout'){
             steps{
-                git branch: 'main', url: 'https://github.com/jaycjj/helloworld_jan_22.git'
+                git branch: 'main', url: 'https://github.com/DivineTala/helloworld_jan_22.git'
             }
         }
         stage('Code Build') {
